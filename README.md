@@ -1,73 +1,36 @@
-# ReplyBot
-## Описание проекта
+<h1 align="center">ReplyBot</h1>
+<p align="center">
+  <img alt="Java" src="https://img.shields.io/badge/Java-11+-ED8B00?logo=openjdk&logoColor=white">
+  <img alt="Telegram Bot API" src="https://img.shields.io/badge/Telegram%20Bot%20API-2CA5E0?logo=telegram&logoColor=white">
+  <img alt="Gson" src="https://img.shields.io/badge/Gson-2CA5E0?logo=google&logoColor=white">
+  <img alt="Status" src="https://img.shields.io/badge/status-stable-green">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-blue">
+</p>
 
-**VPN Support Bot** — это Telegram-бот, предназначенный для поддержки пользователей VPN-сервисов. Бот позволяет пользователям отправлять сообщения модераторам, а модераторы могут отвечать на них через команду `/reply`.
+<br>
 
-## Функциональные возможности
+**ReplyBot** is a lightweight Telegram support bot for VPN services. Enables seamless communication between users and moderators with message routing and access control.
 
-- **Получение сообщений от пользователей**: Бот принимает сообщения от пользователей и передает их модераторам.
-- **Взаимодействие модераторов с пользователями**: Модераторы могут отвечать пользователям через команду `/reply`.
-- **Проверка прав модераторов**: Только пользователи с правами модератора могут использовать команду `/reply`.
-Для создания технической документации с красивыми шрифтами и изображениями на GitHub, можно использовать Markdown, так как это стандартный язык разметки для документации в репозиториях. Я подготовлю пример структуры документации для твоего проекта, которую ты можешь использовать.
-## Требования
+## features
+
+- user-to-moderator message forwarding
+- moderator replies via `/reply <user_id> <message>` command
+- moderator whitelist validation
+- async message processing
+- simple JSON-based configuration
+
+## installation
+
+### prerequisites:
 
 - Java 11+
-- Telegram Bot API библиотека [Pengrad](https://github.com/pengrad/java-telegram-bot-api)
-- JSON библиотека [Gson](https://github.com/google/gson)
+- Maven 3.6+
+- Telegram Bot token
 
-## Установка и запуск
+### from source:
 
-
-    ```bash
-    git clone https://github.com/yourusername/vpn-support-bot.git
-    cd vpn-support-bot
-    mvn clean package
-
-    
-    ```
-
-# Конфигурация
-
-- **Токен бота**: Токен должен быть указан в классе `Main`.
-- **ID модераторов**: Файл `moderators.json` должен содержать список ID модераторов в формате JSON.
-
-Пример файла `moderators.json`:
-
-```json
-{
-  "moderators": [123456789, 987654321]
-}
-```
-
-## Компоненты
-
-### 1. `SupportBot`
-
-Класс, отвечающий за инициализацию бота и обработку входящих сообщений.
-
-### 2. `MessageProcessor`
-
-Сервис для обработки сообщений от пользователей и модераторов.
-
-### 3. `MessageRouter`
-
-Компонент, отвечающий за маршрутизацию сообщений между пользователями и модераторами.
-
-### 4. `ModeratorValidator`
-
-Сервис для проверки прав модератора на основе списка ID.
-
-## Примеры использования
-
-### 1. Отправка сообщения пользователем
-
-![User Message]
-
-Пользователь отправляет сообщение в чат, и оно перенаправляется модераторам.
-
-### 2. Ответ модератора
-
-![Moderator Reply]
-
-Модератор отвечает на сообщение пользователя через команду `/reply <userId> <ответ>`.
-
+```bash
+git clone https://github.com/yourusername/vpn-support-bot.git
+cd vpn-support-bot
+mvn clean package
+java -jar target/vpn-support-bot.jar
