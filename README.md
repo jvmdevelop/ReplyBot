@@ -1,4 +1,4 @@
-<h1 align="center">ReplyBot</h1>
+<h1 align="center">reply-bot</h1>
 <p align="center">
   <img alt="Java" src="https://img.shields.io/badge/Java-11+-ED8B00?logo=openjdk&logoColor=white">
   <img alt="Telegram Bot API" src="https://img.shields.io/badge/Telegram%20Bot%20API-2CA5E0?logo=telegram&logoColor=white">
@@ -9,7 +9,7 @@
 
 <br>
 
-**ReplyBot** is a lightweight Telegram support bot for VPN services. Enables seamless communication between users and moderators with message routing and access control.
+**reply-bot** is a lightweight Telegram support bot for VPN services. Enables seamless communication between users and moderators with message routing and access control.
 
 ## features
 
