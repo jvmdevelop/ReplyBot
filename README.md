@@ -9,7 +9,7 @@
 
 <br>
 
-**reply-bot** is a lightweight Telegram support bot for VPN services. Enables seamless communication between users and moderators with message routing and access control.
+**reply-bot** is a lightweight Telegram support bot. Enables seamless communication between users and moderators with message routing and access control.
 
 ## features
 
